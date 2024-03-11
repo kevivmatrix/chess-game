@@ -28,7 +28,7 @@ export default createStore({
   mutations: {
     changeSelectedPiece(state, payload) {
       state.selectedCell = { x: payload.x, y: payload.y }
-      state.possibleMoves = calculateMoves(payload)
+      state.possibleMoves = calculateMoves(payload, state.board)
     },
     movePiece(state, payload) {
       const piece = state.board[state.selectedCell.y][state.selectedCell.x].piece
