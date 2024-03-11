@@ -7,7 +7,7 @@ export default createStore({
     return {
       board: boardData,
       currentMove: 'white',
-      selectedCell: { x: 0, y: 1 },
+      selectedCell: {},
       possibleMoves: []
     }
   },
